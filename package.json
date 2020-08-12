@@ -8,12 +8,11 @@
   "keywords": [
     "egg",
     "eggPlugin",
-    "egg-plugin"
+    "egg-plugin",
+    "pubsub"
   ],
   "dependencies": {
-    "@google-cloud/pubsub": "2.3.0",
-    "koa-convert": "1.2.0",
-    "koa-compose": "4.1.0"
+    "@google-cloud/pubsub": "2.3.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -48,12 +47,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-pubsub.git"
+    "url": "git+https://github.com/coffeeSouffle/egg-pubsub.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/coffeeSouffle/egg-pubsub/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-pubsub#readme",
+  "homepage": "https://github.com/coffeeSouffle/egg-pubsub#readme",
   "author": "coffeeSouffle",
   "license": "MIT"
 }
