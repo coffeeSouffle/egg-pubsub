@@ -1,6 +1,6 @@
 {
   "name": "egg-pubsub",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "provide google cloud pubsub for egg.js",
   "eggPlugin": {
     "name": "pubsub"
@@ -12,7 +12,8 @@
     "pubsub"
   ],
   "dependencies": {
-    "@google-cloud/pubsub": "2.3.0"
+    "@google-cloud/pubsub": "2.3.0",
+    "is-generator-function": "1.0.7"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -37,10 +38,10 @@
     "autod": "autod"
   },
   "files": [
-    "app.js",
-    "agent.js",
     "config",
-    "app"
+    "agent.js",
+    "lib",
+    "app.js"
   ],
   "ci": {
     "version": "8, 10"
