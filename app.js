@@ -1,5 +1,7 @@
 'use strict';
 
+const loader = require('./lib/loader');
+
 module.exports = app => {
-  if (app.config.pubsub.app) require('./lib/loader')(app);
+  if (app.config.pubsub.app) loader(app);
 };
