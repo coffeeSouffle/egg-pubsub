@@ -46,6 +46,7 @@ exports.pubsub = {
 // {app_root}/config/config.default.js
 exports.pubsub = {
   client: {
+    name: 'pubsubName',
     /**
      * @var topic google cloud topic name, it is optional.
      */
@@ -54,8 +55,35 @@ exports.pubsub = {
      * @var subscription google cloud subscription name, it is optional.
      */
     subscription: 'subscribe name',
+
+    /**
+     * the document contains more detailed information about the settings of pubsub
+     * https://cloud.google.com/nodejs/docs/reference/pubsub/0.28.x/PubSub
+     */
   }
 };
+```
+
+```js
+// {app_root}/pubsub/pubsubName.js
+module.exports = pubsubApp => {
+  pubsubApp.router.register('test', async context => {
+    console.log(context.cmd);
+  });
+}
+```
+
+```js
+// {app_root}/app/controller/home.js
+const controller = require('egg').Controller;
+
+class HomeController extends Controller {
+  async index() {
+    await this.app.pubsub.publish('test');
+  }
+}
+
+module.exports = HomeController;
 ```
 
 see [config/config.default.js](config/config.default.js) for more detail.
